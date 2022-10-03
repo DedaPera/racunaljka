@@ -1,0 +1,7 @@
+.app-container {
+  border: solid 2px rgb(50, 150, 250);
+  border-radius: 7px;
+  color: rgb(50, 150, 250);
+  font-size: 0.75rem;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+<div class="win-container">
+  <h2>{{ title }}</h2>
+  <input type="checkbox" name="shaderNeeded" (change)="changeStatus()" />
+  <div *ngIf="needed">
+    <label for="winW" name="winW">Win width</label>
+    <input type="text" name="winW" id="winW" placeholder="width" />
+    <label for="winH" name="winH">Win height</label>
+    <input type="text" name="winH" id="winH" placeholder="height" />
+    <h2>Price</h2>
+    <h2>145 euro</h2>
+    <h1></h1>
+  </div>
+</div>
