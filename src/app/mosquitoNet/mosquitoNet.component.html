@@ -1,4 +1,3 @@
 <div class="net-container">
-  <h2>{{title}}</h2>
-  <input type="checkbox" name="shaderNeeded" (change)="changeStatus()" />
+  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromChild($event)"></approvalBtn>
 </div>

@@ -6,28 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./win.component.css'],
 })
 export class WinComponent {
-  title: string = 'Window';
-  winWidth: number = 145;
-  winHeight: number = 120;
+  sectionTitle: string = 'Window';
+  sectionBtnStatus: boolean = false;
 
-  widthList: number[] = [60,70,80];
-  heightList: number[] = [100, 110, 120, 130];
-  needed: boolean = false;
-
-  changeStatus(): void {
-    this.needed = !this.needed;    
+  reciveMsgFromChild(msg: boolean): void {
+    this.sectionBtnStatus = msg;
   }
 
-  // dis(){
-  //   let count: number = 0;
-  //   this.widthList.forEach(element => {
-  //     console.log(this.widthList[count]);
-  //     count++
-  //   })    
-  // }
-  
 
-  winArea() {
-    return ((this.winWidth / 100) * this.winHeight) / 100;
-  }
 }

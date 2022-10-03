@@ -6,10 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ['./sunShader.component.css'],
 })
 export class SunShader{
-  title: string = 'Sun Shader';
-  needed: boolean = false;
+  sectionTitle: string = 'Sun Shader';
+  sectionBtnStatus: boolean = false;
 
-  changeStatus(): void{
-    this.needed = !this.needed;    
+  reciveMsgFromChild(msg: boolean): void {
+    this.sectionBtnStatus = msg;
   }
 }

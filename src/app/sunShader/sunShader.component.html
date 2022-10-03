@@ -1,4 +1,37 @@
-<div class="shader-container">
-  <h2>{{ title }}</h2>
-  <input type="checkbox" name="shaderNeeded" (change)="changeStatus()" />
+<div class="shader-container">  
+  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromChild($event)"></approvalBtn>
+<div class="shader-rest" *ngIf="sectionBtnStatus">
+  <label for="sWidth">Shader W</label>
+  <input type="text" name="sWidth" placeholder="width"/>
+  <label for="sHeight">Shader H</label>
+  <input type="text" name="sHeight" placeholder="height"/>
+  <h2>Price</h2>
+    <h2>145 euro</h2>
+  <div class="radiobutton1">
+    <input
+        type="radio"
+        name="material"
+        value="metal"
+        id="metal"
+        [defaultChecked]="true"
+      />
+      <label for="metal">Metal</label>
+      <input type="radio" name="material" value="aluminum" id="aluminum" />
+      <label for="aluminum">Aluminum</label>
+      <div class="radiobutton2">
+        <input
+          type="radio"
+          name="color"
+          value="white"
+          id="white"
+          [defaultChecked]="true"
+        />
+        <label for="white">White</label>
+        <input type="radio" name="color" value="paint" id="paint" />
+        <label for="paint">Paint</label>
+        <input type="radio" name="color" value="lamination" id="lamination" />
+        <label for="lamination">Lamination</label>
+      </div>
+  </div>
+</div>
 </div>

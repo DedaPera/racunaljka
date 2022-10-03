@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./mosquitoNet.component.css'],
 })
 export class MosquitoNet {
-  title: string = 'Mosquito Net';
-  needed: boolean = false;
+  sectionTitle: string = 'Mosquito Net';
+  sectionBtnStatus: boolean = false;
 
-  changeStatus(): void {
-    this.needed = !this.needed;
+  reciveMsgFromChild(msg: boolean): void {
+    this.sectionBtnStatus = msg;
   }
 }
