@@ -1,5 +1,5 @@
 <div class="win-container">  
-  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromChild($event)"></approvalBtn>
+  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromApprovalBtn($event)"></approvalBtn>
   <div class="win-rest" *ngIf="sectionBtnStatus">
     <label for="winW" name="winW">Win W</label>
     <input type="text" name="winW" id="winW" placeholder="width" />

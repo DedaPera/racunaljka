@@ -9,7 +9,7 @@ export class SunShader{
   sectionTitle: string = 'Sun Shader';
   sectionBtnStatus: boolean = false;
 
-  reciveMsgFromChild(msg: boolean): void {
+  reciveMsgFromApprovalBtn(msg: boolean): void {
     this.sectionBtnStatus = msg;
   }
 }

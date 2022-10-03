@@ -1,5 +1,5 @@
 <div class="shader-container">  
-  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromChild($event)"></approvalBtn>
+  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromApprovalBtn($event)"></approvalBtn>
 <div class="shader-rest" *ngIf="sectionBtnStatus">
   <label for="sWidth">Shader W</label>
   <input type="text" name="sWidth" placeholder="width"/>
