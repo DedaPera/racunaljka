@@ -1,3 +1,11 @@
 <div class="net-container">
-  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromApprovalBtn($event)"></approvalBtn>
+  <approvalBtn
+    [btnName]="sectionTitle"
+    (btnEmmiter)="reciveMsgFromApprovalBtn($event)"
+  ></approvalBtn>
+  <div class="net-rest" *ngIf="sectionBtnStatus">
+    <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
+    <h2>Price</h2>
+    <h2>{{ calculatedArea | number: "1.2-2" }}m2</h2>
+  </div>
 </div>

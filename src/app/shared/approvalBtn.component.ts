@@ -23,7 +23,8 @@ export class ApprovalBtnComponent {
   btnEmmiter = new EventEmitter<boolean>();
 
 btnStatusForParent(): void {
-  this.btnEmmiter.emit(this.btnStatus);
+  //this.btnEmmiter.emit(this.btnStatus);
+  this.btnEmmiter.emit(true);
 }
 
   changeStatus(): void {

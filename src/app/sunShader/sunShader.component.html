@@ -1,14 +1,14 @@
-<div class="shader-container">  
-  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromApprovalBtn($event)"></approvalBtn>
-<div class="shader-rest" *ngIf="sectionBtnStatus">
-  <label for="sWidth">Shader W</label>
-  <input type="text" name="sWidth" placeholder="width"/>
-  <label for="sHeight">Shader H</label>
-  <input type="text" name="sHeight" placeholder="height"/>
-  <h2>Price</h2>
-    <h2>145 euro</h2>
-  <div class="radiobutton1">
-    <input
+<div class="shader-container">
+  <approvalBtn
+    [btnName]="sectionTitle"
+    (btnEmmiter)="reciveMsgFromApprovalBtn($event)"
+  ></approvalBtn>
+  <div class="shader-rest" *ngIf="sectionBtnStatus">
+    <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
+    <h2>Price</h2>
+    <h2>{{ calculatedArea | number: "1.2-2" }}m2</h2>
+    <div class="radiobutton1">
+      <input
         type="radio"
         name="material"
         value="metal"
@@ -32,6 +32,6 @@
         <input type="radio" name="color" value="lamination" id="lamination" />
         <label for="lamination">Lamination</label>
       </div>
+    </div>
   </div>
-</div>
 </div>

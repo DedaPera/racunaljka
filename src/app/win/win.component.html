@@ -1,20 +1,14 @@
-<div class="win-container">  
-  <approvalBtn [btnName]="sectionTitle" (btnEmmiter)="reciveMsgFromApprovalBtn($event)"></approvalBtn>
+<div class="win-container">
+  <approvalBtn
+    [btnName]="sectionTitle"
+    (btnEmmiter)="toggleApprovalBtn($event)"
+  ></approvalBtn>
   <div class="win-rest" *ngIf="sectionBtnStatus">
-    <label for="winW" name="winW">Win W</label>
-    <input type="text" name="winW" id="winW" placeholder="width" />
-    <label for="winH" name="winH">Win H</label>
-    <input type="text" name="winH" id="winH" placeholder="height" />
+    <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
     <h2>Price</h2>
-    <h2>145 euro</h2>
+    <h2>{{ calculatedArea | number: "1.2-2" }}m2</h2>
     <div class="radiobutton1">
-      <input
-        type="radio"
-        name="type"
-        value="single"
-        id="single"
-        [defaultChecked]="true"
-      />
+      <input type="radio" name="type" value="single" id="single" />
       <label for="single">Single</label>
       <input type="radio" name="type" value="double" id="double" />
       <label for="double">Double</label>
@@ -22,13 +16,7 @@
       <label for="doubleT">doubleT</label>
     </div>
     <div class="radiobutton2">
-      <input
-        type="radio"
-        name="color"
-        value="white"
-        id="white"
-        [defaultChecked]="true"
-      />
+      <input type="radio" name="color" value="white" id="white" />
       <label for="white">White</label>
       <input type="radio" name="color" value="paint" id="paint" />
       <label for="paint">Paint</label>

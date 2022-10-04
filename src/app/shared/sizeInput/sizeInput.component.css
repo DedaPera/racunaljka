@@ -1,0 +1,13 @@
+#width,
+#height {
+  margin: 5px;
+  width: 65px;
+  height: 30px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 1rem;
+}

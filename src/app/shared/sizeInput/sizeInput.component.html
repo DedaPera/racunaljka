@@ -1,0 +1,22 @@
+<div class="size-input">
+  <label class="label" for="width">Width :</label>
+  <input
+    type="text"
+    id="width"
+    placeholder="{{ widthNum }}"
+    value="0"
+    (focus)="onFocus($event)"
+    (focusout)="grabWidthInput($event)"
+    (focusout)="sendAreaToParent($event)"
+  />
+  <label class="label" for="height">Height :</label>
+  <input
+    type="text"
+    id="height"
+    placeholder="height"
+    value="{{ heightNum }}"
+    (focus)="onFocus($event)"
+    (focusout)="grabHeightInput($event)"
+    (focusout)="sendAreaToParent($event)"
+  />
+</div>

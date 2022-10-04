@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class MosquitoNet {
   sectionTitle: string = 'Mosquito Net';
   sectionBtnStatus: boolean = false;
+  calculatedArea: number = 0;
 
   reciveMsgFromApprovalBtn(msg: boolean): void {
     this.sectionBtnStatus = msg;
+  }
+
+  reciveArea(msg: number): void {
+    this.calculatedArea = msg;
+    //console.log(this.calculatedArea);
   }
 }
