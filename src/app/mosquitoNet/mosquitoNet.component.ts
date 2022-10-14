@@ -10,7 +10,7 @@ export class MosquitoNet {
   sectionBtnStatus: boolean = false;
   calculatedArea: number = 0;
 
-  reciveMsgFromApprovalBtn(msg: boolean): void {
+  toggleApprovalBtn(msg: boolean): void {
     this.sectionBtnStatus = msg;
   }
 

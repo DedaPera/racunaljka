@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MosquitoNet } from './mosquitoNet/mosquitoNet.component';
 import { ApprovalBtnComponent } from './shared/approvalBtn.component';
+import { RadioSection } from './shared/radioSection/radioSection.component';
 import { SizeInput } from './shared/sizeInput/sizeInput.compopnent';
 import { SunShader } from './sunShader/sunShader.component';
 import { WinComponent } from './win/win.component';
@@ -15,6 +16,7 @@ import { WinComponent } from './win/win.component';
     AppComponent,
     ApprovalBtnComponent,
     SizeInput,
+    RadioSection,
     WinComponent,
     SunShader,
     MosquitoNet,

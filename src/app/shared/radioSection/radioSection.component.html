@@ -1,0 +1,16 @@
+<section *ngFor="let item of valuesAndIds; let index = index">
+  <!-- explain index??? -->
+  <input
+    type="radio"
+    name="{{ groupName }}"
+    value="{{ valuesAndIds[index] }}"
+    id="{{ valuesAndIds[index] }}"
+    (click)="radioClicked($event)"
+  />
+  <!-- Need to do slice() in label,
+    so we can remowe last char (to look same) which make
+    different IDs -->
+  <label for="{{ valuesAndIds[index] }}">{{
+    valuesAndIds[index].slice(0, -1) | titlecase
+  }}</label>
+</section>

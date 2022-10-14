@@ -5,3 +5,16 @@
   color: rgb(0, 0, 0);
   text-align: center;
 }
+
+.radio-buttons {
+  margin: 3px;
+  padding: 3px;
+  display:inline-block;
+  text-align: left;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+.price {
+display: inline-block;
+}

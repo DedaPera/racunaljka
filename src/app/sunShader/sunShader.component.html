@@ -1,12 +1,13 @@
 <div class="shader-container">
   <approvalBtn
     [btnName]="sectionTitle"
-    (btnEmmiter)="reciveMsgFromApprovalBtn($event)"
+    (btnEmmiter)="toggleApprovalBtn($event)"
   ></approvalBtn>
   <div class="shader-rest" *ngIf="sectionBtnStatus">
     <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
-    <h2>Price</h2>
-    <h2>{{ calculatedArea | number: "1.2-2" }}m2</h2>
+    <h2>
+      Area <span>{{ calculatedArea | number: "1.2-2" }}m2</span>
+    </h2>
     <div class="radiobutton1">
       <input
         type="radio"
@@ -18,20 +19,12 @@
       <label for="metal">Metal</label>
       <input type="radio" name="material" value="aluminum" id="aluminum" />
       <label for="aluminum">Aluminum</label>
-      <div class="radiobutton2">
-        <input
-          type="radio"
-          name="color"
-          value="white"
-          id="white"
-          [defaultChecked]="true"
-        />
-        <label for="white">White</label>
-        <input type="radio" name="color" value="paint" id="paint" />
-        <label for="paint">Paint</label>
-        <input type="radio" name="color" value="lamination" id="lamination" />
-        <label for="lamination">Lamination</label>
-      </div>
+      <radio-section
+        [groupName]="shaderGroupName"
+        [valuesAndIds]="shaderValuesAndIds"
+        (buttonValueEmiter)="radioBtnsValue($event)"
+      ></radio-section>
     </div>
+    <h2 class="price">Price 145$</h2>
   </div>
 </div>
