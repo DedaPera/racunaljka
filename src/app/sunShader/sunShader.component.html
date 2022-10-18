@@ -1,4 +1,4 @@
-<div class="shader-container">
+<div class="shader-container section">
   <approvalBtn
     [btnName]="sectionTitle"
     (btnEmmiter)="toggleApprovalBtn($event)"
@@ -8,23 +8,21 @@
     <h2>
       Area <span>{{ calculatedArea | number: "1.2-2" }}m2</span>
     </h2>
-    <div class="radiobutton1">
-      <input
-        type="radio"
-        name="material"
-        value="metal"
-        id="metal"
-        [defaultChecked]="true"
-      />
-      <label for="metal">Metal</label>
-      <input type="radio" name="material" value="aluminum" id="aluminum" />
-      <label for="aluminum">Aluminum</label>
+    <div class="radio-buttons">
+      <radio-section 
+        [groupName]="modelGroupName"
+        [valuesAndIds]="modelValuesAndIds"
+        (buttonValueEmiter)="radioBtnsValue($event)"
+      ></radio-section>
+      </div>
+      <div class="radio-buttons">
       <radio-section
-        [groupName]="shaderGroupName"
-        [valuesAndIds]="shaderValuesAndIds"
+        [groupName]="colorGroupName"
+        [valuesAndIds]="colorValuesAndIds"
         (buttonValueEmiter)="radioBtnsValue($event)"
       ></radio-section>
     </div>
     <h2 class="price">Price 145$</h2>
   </div>
+  
 </div>

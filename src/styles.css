@@ -1,6 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.section {
+  margin: 2px;
+  border: solid 2px black;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.radio-buttons {
+  margin: 3px;
+  padding: 3px;
+  display: inline-block;
+  text-align: left;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
+.price {
+  display: inline-block;
+}
+

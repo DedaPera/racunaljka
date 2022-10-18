@@ -4,13 +4,12 @@
     type="radio"
     name="{{ groupName }}"
     value="{{ valuesAndIds[index] }}"
-    id="{{ valuesAndIds[index] }}"
+    id="{{ valuesAndIds[index] + groupName }}"
     (click)="radioClicked($event)"
   />
-  <!-- Need to do slice() in label,
-    so we can remowe last char (to look same) which make
-    different IDs -->
-  <label for="{{ valuesAndIds[index] }}">{{
-    valuesAndIds[index].slice(0, -1) | titlecase
+  <!-- Need to do ***valuesAndIds[index] + groupName*** in
+    labels and IDs, so we can resolwe interfering  -->
+  <label for="{{ valuesAndIds[index] + groupName }}">{{
+    valuesAndIds[index] | titlecase
   }}</label>
 </section>

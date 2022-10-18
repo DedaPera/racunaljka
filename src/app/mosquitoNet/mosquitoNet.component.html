@@ -1,4 +1,4 @@
-<div class="net-container">
+<div class="net-container section">
   <approvalBtn
     [btnName]="sectionTitle"
     (btnEmmiter)="toggleApprovalBtn($event)"
@@ -8,6 +8,20 @@
     <h2>
       Area <span>{{ calculatedArea | number: "1.2-2" }}m2</span>
     </h2>
+    <div class="radio-buttons">
+      <radio-section 
+        [groupName]="modelGroupName"
+        [valuesAndIds]="modelValuesAndIds"
+        (buttonValueEmiter)="radioBtnsValue($event)"
+      ></radio-section>
+      </div>
+      <div class="radio-buttons">
+      <radio-section
+        [groupName]="colorGroupName"
+        [valuesAndIds]="colorValuesAndIds"
+        (buttonValueEmiter)="radioBtnsValue($event)"
+      ></radio-section>
+    </div>
     <h2 class="price">Price 145$</h2>
   </div>
 </div>

@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class WinComponent {
   sectionTitle: string = 'Window';
-  sectionBtnStatus: boolean = true;
+  sectionBtnStatus: boolean = false;
   calculatedArea: number = 0;
   //////////////////////////////////////////////////////////////
-  colorGroupName: string = 'wincolor';
-  colorValuesAndIds: string[] = ['whitew', 'paintw', 'laminationw'];
+  modelGroupName: string = 'winmodel';
+  modelValuesAndIds: string[] = ['single', 'double', 'double_t'];
   //////////////////////////////////////////////////////////////
-  modelGroupName: string = 'model';
-  modelValuesAndIds: string[] = ['single', 'double', 'double T'];
+  colorGroupName: string = 'wincolor';
+  colorValuesAndIds: string[] = ['white', 'paint', 'lamination'];
   //////////////////////////////////////////////////////////////
   // Here we catch toggle status from approvalBtn component
   toggleApprovalBtn(msg: boolean): void {
@@ -27,7 +27,8 @@ export class WinComponent {
   }
   // Here we catch value and group name from radio button component
   radioBtnsValue(msg: any): void {
-    console.log(msg.name);
-    console.log(msg.value);
+    console.log('Radio ' + msg.value + ' from ' + msg.name);
   }
+  // Call this method to restart states of radio buttons
+  clearAllRadios(): void {}
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RadioSection } from '../shared/radioSection/radioSection.component';
 
 @Component({
   selector: 'shader-product',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 })
 export class SunShader {
   sectionTitle: string = 'Sun Shader';
-  sectionBtnStatus: boolean = false;
+  sectionBtnStatus: boolean = true;
   calculatedArea: number = 0;
   //////////////////////////////////////////////////////////////
-  shaderGroupName: string = 'shadercolor';
-  shaderValuesAndIds: string[] = ['whites', 'paints', 'laminations'];
+  modelGroupName: string = 'shadermodel';
+  modelValuesAndIds: string[] = ['clasic', 'ronda'];
+  //////////////////////////////////////////////////////////////
+  colorGroupName: string = 'shadercolor';
+  colorValuesAndIds: string[] = ['white', 'paint', 'lamination'];
   //////////////////////////////////////////////////////////////
   // Here we catch toggle status from approvalBtn component
   toggleApprovalBtn(msg: boolean): void {
@@ -24,7 +28,8 @@ export class SunShader {
   }
   // Here we catch value and group name from radio button component
   radioBtnsValue(msg: any): void {
-    console.log(msg.name);
-    console.log(msg.value);
+    console.log('Radio ' + msg.value + ' from ' + msg.name);
   }
+  // Call this method to restart states of radio buttons
+
 }

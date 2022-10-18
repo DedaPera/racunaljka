@@ -4,4 +4,9 @@
   color: rgb(50, 150, 250);
   font-size: 0.75rem;
   text-align: center;
+  height: 100vh;
+}
+
+.empty-div{
+  background-color: aqua;
 }
