@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'PVC app';
+
+  settingsClick(): void {
+    console.log('settings');
+  }
 }

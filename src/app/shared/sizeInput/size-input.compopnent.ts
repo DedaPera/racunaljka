@@ -2,8 +2,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'size-input',
-  templateUrl: './sizeInput.component.html',
-  styleUrls: ['./sizeInput.component.css'],
+  templateUrl: './size-input.component.html',
+  styleUrls: ['./size-input.component.css'],
 })
 export class SizeInput {
   widthNum: number = 0;
@@ -16,17 +16,6 @@ export class SizeInput {
   sendAreaToParent(e: any): void {
     this.totalArea = (this.widthNum * this.heightNum) / 10000;
     this.inputFieldEmiter.emit(this.totalArea);
-    //console.log(this.totalArea);
-  }
-
-  grabWidthInput(e: any): void {
-    this.widthNum = e.target.value;
-    //console.log(this.widthNum);
-  }
-
-  grabHeightInput(e: any): void {
-    this.heightNum = e.target.value;
-    //console.log(this.heightNum);
   }
   // Just to select all txt field
   onFocus(e: any): void {

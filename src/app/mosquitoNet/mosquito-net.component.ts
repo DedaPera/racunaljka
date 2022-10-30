@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'net-product',
-  templateUrl: './mosquitoNet.component.html',
-  styleUrls: ['./mosquitoNet.component.css'],
+  templateUrl: './mosquito-net.component.html',
+  styleUrls: ['./mosquito-net.component.css'],
 })
 export class MosquitoNet {
   sectionTitle: string = 'Mosquito Net';
-  sectionBtnStatus: boolean = true;
+  sectionBtnStatus: boolean = false;
   calculatedArea: number = 0;
   //////////////////////////////////////////////////////////////
   modelGroupName: string = 'netmodel';
-  modelValuesAndIds: string[] = ['fix', 'rolo', 'plisse'];
+  modelValuesAndIds: string[] = ['fix', 'rolo', 'plisse', 'plisse_d'];
   //////////////////////////////////////////////////////////////
   colorGroupName: string = 'netcolor';
   colorValuesAndIds: string[] = ['white', 'paint', 'lamination'];

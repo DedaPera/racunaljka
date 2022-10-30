@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { RadioSection } from '../shared/radioSection/radioSection.component';
+import { RadioSection } from '../shared/radioSection/radio-section.component';
 
 @Component({
   selector: 'shader-product',
-  templateUrl: './sunShader.component.html',
-  styleUrls: ['./sunShader.component.css'],
+  templateUrl: './sun-shader.component.html',
+  styleUrls: ['./sun-shader.component.css'],
 })
 export class SunShader {
   sectionTitle: string = 'Sun Shader';
-  sectionBtnStatus: boolean = true;
+  sectionBtnStatus: boolean = false;
   calculatedArea: number = 0;
   //////////////////////////////////////////////////////////////
   modelGroupName: string = 'shadermodel';
-  modelValuesAndIds: string[] = ['clasic', 'ronda'];
+  modelValuesAndIds: string[] = ['indor', 'clasic', 'ronda'];
   //////////////////////////////////////////////////////////////
   colorGroupName: string = 'shadercolor';
   colorValuesAndIds: string[] = ['white', 'paint', 'lamination'];
@@ -31,5 +31,4 @@ export class SunShader {
     console.log('Radio ' + msg.value + ' from ' + msg.name);
   }
   // Call this method to restart states of radio buttons
-
 }

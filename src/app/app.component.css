@@ -1,12 +1,26 @@
 .app-container {
-  border: solid 2px rgb(50, 150, 250);
+  background-color: #2274a5;
+  border: solid 2px rgb(0, 0, 0);
   border-radius: 7px;
-  color: rgb(50, 150, 250);
-  font-size: 0.75rem;
+  color: #e6af2e;
+  font-size: 1rem;
+  font-style: italic;
   text-align: center;
   height: 100vh;
 }
 
-.empty-div{
-  background-color: aqua;
+.header{
+  margin: 2px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-btn {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bolder;
+}
+
+.empty-div {
+  background-color: rgb(222, 223, 226);
 }

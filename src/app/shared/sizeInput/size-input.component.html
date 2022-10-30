@@ -3,20 +3,20 @@
   <input
     type="text"
     id="width"
-    placeholder="{{ widthNum }}"
-    value="0"
+    value="{{ widthNum }}"
     (focus)="onFocus($event)"
-    (focusout)="grabWidthInput($event)"
+    [(ngModel)]="widthNum"
     (focusout)="sendAreaToParent($event)"
+    NumberOnly
   />
   <label class="label" for="height">Height :</label>
   <input
     type="text"
     id="height"
-    placeholder="height"
     value="{{ heightNum }}"
     (focus)="onFocus($event)"
-    (focusout)="grabHeightInput($event)"
+    [(ngModel)]="heightNum"
     (focusout)="sendAreaToParent($event)"
+    NumberOnly
   />
 </div>

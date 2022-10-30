@@ -1,8 +1,8 @@
 <div class="net-container section">
-  <approvalBtn
+  <approval-btn
     [btnName]="sectionTitle"
     (btnEmmiter)="toggleApprovalBtn($event)"
-  ></approvalBtn>
+  ></approval-btn>
   <div class="net-rest" *ngIf="sectionBtnStatus">
     <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
     <h2>

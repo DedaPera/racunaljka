@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AddView } from './addView/addView.componet';
+import { AddView } from './addView/add-view.componet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MosquitoNet } from './mosquitoNet/mosquitoNet.component';
-import { ApprovalBtnComponent } from './shared/approvalBtn.component';
-import { RadioSection } from './shared/radioSection/radioSection.component';
-import { SizeInput } from './shared/sizeInput/sizeInput.compopnent';
-import { SunShader } from './sunShader/sunShader.component';
+import { MosquitoNet } from './mosquitoNet/mosquito-net.component';
+import { ApprovalBtnComponent } from './shared/approval-button.component';
+import { OnlyNumberDirective } from './shared/only-number-directive';
+import { RadioSection } from './shared/radioSection/radio-section.component';
+import { SizeInput } from './shared/sizeInput/size-input.compopnent';
+import { SunShader } from './sunShader/sun-shader.component';
 import { WinComponent } from './win/win.component';
 
 @NgModule({
@@ -17,11 +18,12 @@ import { WinComponent } from './win/win.component';
     AppComponent,
     ApprovalBtnComponent,
     SizeInput,
+    OnlyNumberDirective,
     RadioSection,
     WinComponent,
     SunShader,
     MosquitoNet,
-    AddView
+    AddView,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],

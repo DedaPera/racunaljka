@@ -1,10 +1,17 @@
 .add-view-container {
-  margin: 2px;
   border: solid 2px black;
   border-radius: 7px;
   color: rgb(0, 0, 0);
   text-align: center;
   font-size: 1.5rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position:absolute;
+  bottom: 5px;
+  width: 95%;
 }
 
 .btn{

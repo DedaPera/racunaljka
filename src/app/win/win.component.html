@@ -1,8 +1,8 @@
 <div class="win-container section">
-  <approvalBtn
+  <approval-btn
     [btnName]="sectionTitle"
     (btnEmmiter)="toggleApprovalBtn($event)"
-  ></approvalBtn>
+  ></approval-btn>
   <div class="win-rest" *ngIf="sectionBtnStatus">
     <size-input (inputFieldEmiter)="reciveArea($event)"></size-input>
     <h2>
@@ -22,6 +22,6 @@
         (buttonValueEmiter)="radioBtnsValue($event)"
       ></radio-section>
     </div>
-    <h2 class="price">Price 145$</h2>
+    <h2 class="price">Price 145&euro;</h2>
   </div>
 </div>
