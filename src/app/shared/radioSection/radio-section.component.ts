@@ -13,6 +13,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class RadioSection {
   idsNames: string[] = []; // collect IDs if need to uncheck them
+  // Part 3, 44:30 Input and Output // 
+  // Part 5 NAvigation and routing, dispaly multiple pages
   @Input() groupName: string = '';
   @Input() valuesAndIds: string[] = []; // Incoming list for values, ids, labels...
 
